@@ -29,6 +29,10 @@ function WeatherReportsTable() {
         }
     }, [reportsQuery.data]);
 
+    useEffect(() => {
+        console.log({error: reportsQuery.error, isLoading: reportsQuery.isLoading});
+    }, [reportsQuery.isLoading]);
+
     const onUpdateReport = (report: IReport) => {
         setUpdateReportModalActive(true);
         setUpdatedReport(report);
@@ -95,7 +99,8 @@ function WeatherReportsTable() {
                 </Table>
                 { reportsQuery.isLoading && (
                     <div className="flex w-full justify-center mt-5">
-                        <Spinner color="loading" size="xl" />
+                        <Spinner color="loading" size="sm" />
+                        Loading...
                     </div>
                 )}
                 { reportsQuery.isError && (

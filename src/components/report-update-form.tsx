@@ -177,15 +177,17 @@ export const ReportUpdateForm: FC<Props> =
                                     </h1>
                                 )}
                             </div>
-                            <div className="flex justify-between">
-                                <LoadingButtonWrapper isLoading={reportDeleteMutation.isPending}>
-                                    <Button disabled={!report.id} color="red" onClick={handleDeleteMutation}>Delete</Button>
-                                </LoadingButtonWrapper>
+                            <div className="flex flex-row-reverse justify-between">
                                 <LoadingButtonWrapper isLoading={reportUpdateMutation.isPending || reportCreateMutation.isPending}>
                                     <Button color="primary" type="submit" onClick={handleSubmit(onSubmit)} form="update-form">
                                         {report.id ? "Update" : "Create"}
                                     </Button>
                                 </LoadingButtonWrapper>
+                                { report.id && (
+                                    <LoadingButtonWrapper isLoading={reportDeleteMutation.isPending}>
+                                        <Button disabled={!report.id} color="red" onClick={handleDeleteMutation}>Delete</Button>
+                                    </LoadingButtonWrapper>
+                                )}
                             </div>
                         </div>
                     </form>

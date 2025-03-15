@@ -1,20 +1,35 @@
 import type { CustomFlowbiteTheme } from "flowbite-react";
 
 const flowbiteTheme: CustomFlowbiteTheme = {
+    avatar: {
+        root: {
+            initials: {
+                text: "font-medium font-sans pt-[5%]",
+                base: "relative inline-flex items-center justify-center overflow-hidden bg-surface-grey",
+            },
+            size: {
+                xs: "h-6 w-6 text-md",
+                sm: "h-8 w-8 text-xl",
+                md: "h-10 w-10 text-2xl",
+                lg: "h-20 w-20 text-5xl",
+                xl: "h-32 w-32 text-[72px]"
+            },
+        },
+    },
     table: {
         root: {
-            base: "w-full text-left text-surface-grey divide-y divide-surface-grey-darker",
+            base: "w-full text-left divide-y divide-surface-grey-darker",
             shadow: "absolute left-0 top-0 -z-10 h-full w-full rounded-lg drop-shadow-md bg-background-black",
             wrapper: "relative"
         },
         body: {
-            base: "group/body text-surface-grey divide-y divide-surface-grey-darker",
+            base: "group/body divide-y divide-surface-grey-darker",
             cell: {
                 base: "px-6 py-4 whitespace-nowrap text-sm font-light 3rd:text-white 3rd:font-medium"
             }
         },
         head: {
-            base: "group/head text-surface-grey font-semibold text-sm capitalize",
+            base: "group/head font-semibold text-sm capitalize",
             cell: {
                 base: "px-6 py-3 bg-background-black bg-gradient-to-b from-[rgba(52,52,52,0.4)] to-transparen"
             }
@@ -36,7 +51,7 @@ const flowbiteTheme: CustomFlowbiteTheme = {
             select: {
                 colors: {
                     primary: "placeholder-gray-400 border-none",
-                    failure: "!focus:ring-red-500 placeholder-gray-400 border-none"
+                    failure: "!focus:ring-red-500 placeholder-gray-400 border-none !text-red-800"
                 },
                 sizes: {
                     md: "py-4 px-7 [border-radius:16px] text-sm"
@@ -45,7 +60,7 @@ const flowbiteTheme: CustomFlowbiteTheme = {
         }
     },
     textInput: {
-        addon: "inline-flex items-center [border-bottom-left-radius:16px] [border-top-left-radius:16px] border border-0 bg-input-addon-grey px-3 text-sm text-power-grey",
+        addon: "inline-flex items-center [border-bottom-left-radius:16px] [border-top-left-radius:16px] border border-0 bg-input-addon-grey px-3 text-sm",
         field: {
             icon: {
                 svg: "h-4 w-4 text-white relative [top:-1px]"
@@ -57,8 +72,8 @@ const flowbiteTheme: CustomFlowbiteTheme = {
                 },
                 base: "small-text w-full flex items-center focus:outline-none focus:ring-2 focus:ring-gray-600 w-full mx-auto border-none font-sans font-normal !leading-0",
                 colors: {
-                    primary: "focus:ring-dark-green placeholder-gray-400 text-black",
-                    failure: "focus:ring-red-500 placeholder-gray-400 text-black"
+                    primary: "focus:ring-dark-green placeholder-gray-400 !text-black",
+                    failure: "focus:ring-red-500 placeholder-gray-400 !text-red-800"
                 },
                 sizes: {
                     md: "py-4 px-7 [border-radius:16px] text-normal"
@@ -148,7 +163,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
     button: {
         color: {
             primary: "bg-gray-300 font-bold text-black font-mono hover:shadow-none duration-300 no-underline uppercase hover:bg-gray-700 hover:text-white hover:border-white",
-            gray: "text-surface-grey bg-section-grey border border-none enabled:hover:bg-gradient-hover enabled:hover:text-white focus:text-white",
             red: "font-bold uppercase font-mono transition border border-red-600 bg-red-600 text-white focus:ring-red-700 enabled:hover:border-red-700 enabled:hover:bg-red-700",
         },
         size: {
@@ -213,13 +227,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
         },
         collapse: {
             button: "group flex w-full items-center rounded-lg p-2 text-base font-normal text-surface-grey transition duration-75 hover:text-white hover:bg-gradient-hover",
-            icon: {
-                "base": "h-6 w-6 text-surface-gray transition duration-75",
-                "open": {
-                    "off": "",
-                    "on": "text-surface-grey"
-                }
-            },
             label: {
                 "base": "ml-3 flex-1 whitespace-nowrap text-left pt-[4px]",
                 "icon": {
@@ -230,7 +237,7 @@ const flowbiteTheme: CustomFlowbiteTheme = {
         item: {
             base: "flex items-center justify-center rounded-lg p-2 mt-1 text-black text-xl font-normal hover:text-white hover:bg-gradient-to-l hover:from-[#FFFFFF50] hover:to-[#FFFFFF00]",
             icon: {
-                base: "h-6 w-6 flex-shrink-0 text-surface-gray transition duration-75"
+                base: "h-6 w-6 flex-shrink-0 transition duration-75"
             },
             content: {
                 base: "flex-1 whitespace-nowrap px-3 pt-[4px]"
