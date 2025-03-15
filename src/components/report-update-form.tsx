@@ -171,15 +171,17 @@ export const ReportUpdateForm: FC<Props> =
                                         )}
                                     />
                                 </div>
-                                <h1 className="text-red-500 font-bold">
-                                    {errorMessage}
-                                </h1>
+                                { errorMessage && (
+                                    <h1 className="text-red-800 bg-white p-1 rounded-xl inline-block font-bold text-xl">
+                                        {errorMessage}
+                                    </h1>
+                                )}
                             </div>
                             <div className="flex justify-between">
                                 <LoadingButtonWrapper isLoading={reportDeleteMutation.isPending}>
                                     <Button disabled={!report.id} color="red" onClick={handleDeleteMutation}>Delete</Button>
                                 </LoadingButtonWrapper>
-                                <LoadingButtonWrapper isLoading={reportUpdateMutation.isPending}>
+                                <LoadingButtonWrapper isLoading={reportUpdateMutation.isPending || reportCreateMutation.isPending}>
                                     <Button color="primary" type="submit" onClick={handleSubmit(onSubmit)} form="update-form">
                                         {report.id ? "Update" : "Create"}
                                     </Button>

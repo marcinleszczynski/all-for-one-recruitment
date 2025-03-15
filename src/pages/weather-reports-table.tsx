@@ -76,18 +76,6 @@ function WeatherReportsTable() {
                         <Table.HeadCell>Edit</Table.HeadCell>
                     </Table.Head>
                     <Table.Body>
-                        {reportsQuery.isLoading && (
-                            <Table.Row>
-                                <Table.Cell>
-                                    <Spinner />
-                                </Table.Cell>
-                            </Table.Row>
-                        )}
-                        {reportsQuery.isError && (
-                            <Table.Row>
-                                Error occured
-                            </Table.Row>
-                        )}
                         {displayedReports.map((report) => (
                             <Table.Row key={report.id}>
                                 <Table.Cell>{report.city}</Table.Cell>
@@ -105,6 +93,16 @@ function WeatherReportsTable() {
                         ))}
                     </Table.Body>
                 </Table>
+                { reportsQuery.isLoading && (
+                    <div className="flex w-full justify-center mt-5">
+                        <Spinner color="loading" size="xl" />
+                    </div>
+                )}
+                { reportsQuery.isError && (
+                    <div className="flex w-full justify-center mt-5 text-lg text-red-800">
+                        Error when downloading reports
+                    </div>
+                )}
             </div>
             <Modal onClose={onModalClose} show={updateReportModalActive}>
                 <div className="flex w-[95vw] h-[95vh] justify-end items-center">

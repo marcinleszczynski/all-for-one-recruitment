@@ -25,72 +25,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
             hovered: "hover:bg-surface-grey-darker"
         }
     },
-    accordion: {
-        root: {
-            base: "divide-y divide-surface-grey",
-            "flush": {
-                "off": "rounded-lg border border-surface-grey",
-                "on": "border-b border-surface-grey"
-            },
-        },
-        title: {
-            "flush": {
-                "off": "hover:bg-section-grey-light focus:ring-1 focus:ring-gray-200"
-            },
-            open: {
-                "on": "bg-section-grey-light"
-            }
-        }
-    },
-    card: {
-        root: {
-            "base": "flex rounded-lg border-none bg-section-grey shadow-md",
-        }
-    },
-    popover: {
-        base: "absolute z-20 inline-block w-max max-w-[100vw] bg-section-grey outline-none border border-surface-grey rounded-lg shadow-sm",
-        arrow: {
-            "base": "absolute h-2 w-2 z-0 rotate-45 mix-blend-lighten bg-transparent border-none",
-            "placement": "-4px"
-        }
-    },
-    pagination: {
-        pages: {
-            next: {
-                base: "rounded-r-lg border border-gray-300 bg-primary-700 px-3 py-2 leading-tight text-white enabled:hover:bg-primary-800",
-            },
-        },
-    },
-    avatar: {
-        root: {
-            initials: {
-                text: "font-medium text-section-grey font-sans pt-[5%]",
-                base: "relative inline-flex items-center justify-center overflow-hidden bg-surface-grey",
-            },
-            size: {
-                xs: "h-6 w-6 text-md",
-                sm: "h-8 w-8 text-xl",
-                md: "h-10 w-10 text-2xl",
-                lg: "h-20 w-20 text-5xl",
-                xl: "h-32 w-32 text-[72px]"
-            },
-        },
-    },
-    badge: {
-        root: {
-            color: {
-                primary:
-                    "bg-primary-100 text-primary-800 dark:bg-primary-300 dark:text-primary-900 group-hover:bg-primary-300 dark:group-hover:bg-primary-300",
-                success: "bg-success-green text-white",
-                failure: "bg-failure-red text-white",
-                red: "text-red-light",
-                green: "text-main-light-green",
-                blue: "text-jazz-blue",
-                gray: "bg-badge-grey text-white",
-                purple: "bg-badge-purple text-white"
-            },
-        },
-    },
     spinner: {
         base: "inline animate-spin",
         color: {
@@ -226,15 +160,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
         pill: {
             off: "rounded-full",
         },
-        outline: {
-            color: {
-                primary: "border border-[#585858] bg-toggle-background !shadow-none"
-            },
-            on: "bg-toggle-background transition-all duration-75 ease-in group-enabled:group-hover:shadow-green-shadow text-white group-enabled:group-hover:ring-0 group-enabled:group-hover:border-none",
-            pill: {
-                off: "rounded-[500px]"
-            }
-        },
     },
     dropdown: {
         floating: {
@@ -260,11 +185,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
             }
         }
     },
-    radio: {
-        root: {
-            "base": "h-4 w-4 border border-grey-outline text-section-grey bg-section-grey focus:ring-1 focus:ring-main"
-        }
-    },
     modal: {
         content: {
             inner: "relative flex flex-col rounded-xl"
@@ -284,11 +204,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
         },
         footer: {
             popup: ""
-        }
-    },
-    navbar: {
-        root: {
-            base: "fixed z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700",
         }
     },
     sidebar: {
@@ -322,36 +237,6 @@ const flowbiteTheme: CustomFlowbiteTheme = {
             },
         }
 
-    },
-    textarea: {
-        base: "block w-full py-4 px-7 [border-radius:16px] text-sm border disabled:cursor-not-allowed disabled:opacity-50",
-        colors: {
-            primary: "bg-jet-color focus:ring-dark-green placeholder-gray-400 text-black focus:border-dark-green border-none",
-            failure: "border-red-500 bg-red-50 text-red-900 focus:border-red-500 focus:ring-red-500 bg-jet-color placeholder-gray-400",
-        },
-    },
-    checkbox: {
-        root: {
-            base: "h-5 w-5 rounded border border-surface-grey text-white",
-            color: {
-                default:
-                    "focus:ring-0 text-main bg-section-grey",
-            },
-        },
-    },
-    toggleSwitch: {
-        root: {
-        },
-        toggle: {
-            base: "relative rounded-full border after:absolute after:rounded-full after:bg-main after:transition-all group-focus:ring-1 !bg-toggle-background",
-            checked: {
-                on: "border !border-main after:translate-x-full after:border-main rtl:after:-translate-x-full after:bg-main group-focus:ring-main",
-                off: "border border-industrial-revolution after:bg-industrial-revolution group-focus:ring-industrial-revolution"
-            },
-            sizes: {
-                md: "h-6 w-11 min-w-11 after:left-px after:top-px after:h-5 after:w-5 rtl:after:right-px",
-            }
-        }
     },
 };
 
